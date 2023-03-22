@@ -9,16 +9,39 @@ arts = Stream("Arts")
 commerce = Stream("Commerce")
 general = Stream("General")
 
-# types of career
-engineering = Career("Engineering", Education.HigherSecondary)
-medical = Career("Medical", Education.HigherSecondary)
+# types of degree
+computerScience = Degree("B.Tech in Computer Science", "4 Years", Difficulty.Medium)
+informationTechnology = Degree("B.Tech in Information Technology", "4 Years", Difficulty.Medium)
 
-# database
-science.addCareer(engineering)
-science.addCareer(medical)
+# types of career 
+softwareEngineering = Career("Software Engineering", Education.HigherSecondary)
 
-data = science.getData()
-careers = data[2]
+# types of questions
 
-for i in range(0, len(careers)):
-    print(careers[i].getData()[0])
+
+# database degree
+computerScience.addRoadMap(["12th (Science)", "State Level Exam or JEE"])
+informationTechnology.addRoadMap(["12th (Science)", "State Level Exam or JEE"])
+
+#database career
+softwareEngineering.addDegree(computerScience)
+softwareEngineering.addDegree(informationTechnology)
+
+# database stream
+science.addCareer(softwareEngineering)
+
+# test
+for career in science.getData("careers"):
+    print("Career =", career.getData("name"))
+    print("Minimum Education =", career.getData("minimumEducation").name)
+    print("Degrees->")
+    print(".........................")
+
+    for degree in career.getData("degrees"):
+        print("...")
+        print("Name =", degree.getData("name"))
+        print("Duration =", degree.getData("duration"))
+        print("Difficulty =", degree.getData("difficulty").name)
+        print("Road Map =", degree.getData("roadMap"))
+
+    print(".........................")
