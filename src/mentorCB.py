@@ -7,15 +7,17 @@ class Degree: pass
 
 class Education: pass
 class Difficulty: pass
+class Demand: pass
 
 class Stream:
     __name = str
     __likeable = float
-    __careers = []
+    __careers = None
 
     def __init__(self, name:str) -> None:
         self.__name = name
         self.__likeable = 0.0
+        self.__careers = []
     
     def addCareer(self, career:Career) -> None:
         self.__careers.append(career)
@@ -30,15 +32,18 @@ class Stream:
 class Career:
     __name = str
     __stream = None
-    __degrees = []
+    __degrees = None
     __likable = float
-    # __demand
-    # __annualSalary 
+    __demand = Demand
+    __annualSalary = str
     __minimumEducation = Education
 
-    def __init__(self, name:str, minEdu:Education) -> None:
+    def __init__(self, name:str, demand:Demand, annualSalary:str, minEdu:Education) -> None:
         self.__name = name
         self.__likable = 0.0
+        self.__degrees = []
+        self.__demand = demand
+        self.__annualSalary = annualSalary
         self.__minimumEducation = minEdu
 
     def addDegree(self, degree:Degree):
@@ -55,16 +60,20 @@ class Career:
         elif(data == "degrees"): return self.__degrees
         elif(data == "likable"): return self.__likable
         elif(data == "minimumEducation"): return self.__minimumEducation
+        elif(data == "demand"): return self.__demand
+        elif(data == "annualSalary"): return self.__annualSalary
         else: raise Exception("data name = {0} not found in {1} Career Class".format(data, self.__name))
     
 class Question:
     __rating = int
     __question = str
-    __careerEffect = []
-    __streamEffect = []
+    __careerEffect = None
+    __streamEffect = None
 
     def __init__(self, question:str) -> None:
         self.__question = question
+        self.__careerEffect = []
+        self.__streamEffect = []
     
     def getData(self, data:str) -> any:
         if(data == "rating"): return self.__rating
@@ -77,12 +86,13 @@ class Degree:
     __name = str
     __duration = str
     __difficulty = Difficulty
-    __roadMap = []
+    __roadMap = None
 
     def __init__(self, name:str, duration:str, difficulty:Difficulty) -> None:
         self.__name = name
         self.__duration = duration
         self.__difficulty = difficulty
+        self.__roadMap = []
 
     def addRoadMap(self, steps:list[str]) -> None:
         if(len(self.__roadMap) > 0): raise Exception("Road Map is already present in {0}".format(self.__name))
@@ -104,3 +114,8 @@ class Difficulty(Enum):
     Easy = 1
     Medium = 2
     Tough = 3
+
+class Demand(Enum):
+    Low = 1
+    Medium = 2
+    High = 3
