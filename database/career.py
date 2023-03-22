@@ -13,6 +13,9 @@ general = Stream("General")
 computerScience = Degree("B.Tech in Computer Science", "4 Years", Difficulty.Medium)
 informationTechnology = Degree("B.Tech in Information Technology", "4 Years", Difficulty.Medium)
 civilEngineering = Degree("B.Tech in Civil Engineering.", "4 Years", Difficulty.Medium)
+mechanicalEngineering = Degree("B.Tech in Mechanical Engineering", "4 Years", Difficulty.Medium)
+electricalEngineering = Degree("B.Tech in Electrical Engineering.", "4 Years", Difficulty.Tough)
+
 
 # types of career 
 softwareEngineer = Career("Software Engineer", Education.HigherSecondary)
