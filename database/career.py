@@ -28,8 +28,8 @@ bams = Degree("Bechelor of Ayurvedic Medicine & Surgery","5.5 Years", Difficulty
 bpharma = Degree("Bechelor of Pharmacy", "4 Years", Difficulty.Medium)
 dpharma = Degree("Diploma of Pharmacy", "2 Years", Difficulty.Easy)
 bscNursing = Degree("Bachelor of Science in Nursing", "4 Years", Difficulty.Easy)
-paramedical = Degree("Paramedical course", "2 Years", Difficulty.Low)
-physicsHonors = Degree("Bechelor of Science in Physics", Difficulty.Tough)
+paramedical = Degree("Paramedical course", "2 Years", Difficulty.Easy)
+physicsHonors = Degree("Bechelor of Science in Physics","3 Years", Difficulty.Tough)
 
 
 # types of career 
