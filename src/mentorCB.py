@@ -36,15 +36,13 @@ class Career:
     __likable = float
     __demand = Demand
     __annualSalary = str
-    __minimumEducation = Education
 
-    def __init__(self, name:str, demand:Demand, annualSalary:str, minEdu:Education) -> None:
+    def __init__(self, name:str, demand:Demand, annualSalary:str) -> None:
         self.__name = name
         self.__likable = 0.0
         self.__degrees = []
         self.__demand = demand
         self.__annualSalary = annualSalary
-        self.__minimumEducation = minEdu
 
     def addDegree(self, degree:Degree):
         self.__degrees.append(degree)
@@ -59,7 +57,6 @@ class Career:
         elif(data == "stream"): return self.__stream
         elif(data == "degrees"): return self.__degrees
         elif(data == "likable"): return self.__likable
-        elif(data == "minimumEducation"): return self.__minimumEducation
         elif(data == "demand"): return self.__demand
         elif(data == "annualSalary"): return self.__annualSalary
         else: raise Exception("data name = {0} not found in {1} Career Class".format(data, self.__name))
@@ -105,11 +102,7 @@ class Degree:
         elif(data == "roadMap"): return self.__roadMap
         else: raise Exception("data name = {0} not found in {1} Degree Class".format(data, self.__name))
         
-    
-class Education(Enum):
-    Secondary = 1
-    HigherSecondary = 2
-
+        
 class Difficulty(Enum):
     Easy = 1
     Medium = 2
