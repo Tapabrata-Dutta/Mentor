@@ -92,6 +92,23 @@ zoologist = Career("Zoologist", Demand.Medium, bSC, 4)
 wildBio = Career("Wildlife Biologist", Demand.Medium, mSC, 6)
 epidlogist = Career("Epidemiologist", Demand.Medium, mSC, 6)
 
+lawyers = Career("Lawyer", Demand.High, lLB, 6)
+fashionDes = Career("Fashion Designer", Demand.Medium, bDes, 3.8)
+historian = Career("Historian", Demand.Medium, pHd, 8)
+cartographer = Career("Cartographer", Demand.Medium, mA, 3)
+geographer = Career("Geographer", Demand.Medium, mA, 3.6)
+eventPlanner = Career("Event Planer", Demand.Medium, bHM, 5)
+hotelManager = Career("Hotel Manager", Demand.Medium, bHM, 4)
+rehCounsellor = Career("Rehabilitation Counsellor", Demand.Low, bA, 3)
+socialWorker = Career("Social Worker", Demand.Medium, bA, 3)
+journalist = Career("Journalist", Demand.Medium, bA, 4)
+politicalSci = Career("Political Scientist", Demand.Medium, mA, 6)
+fashionSty = Career("Fashion Stylist", Demand.Medium, bDes, 5)
+marketingEx = Career("Marketing Executive", Demand.Medium, mA, 5)
+companySec = Career("Company Secretary", Demand.Medium, lLB, 6)
+travelAg = Career("Travel Agent", Demand.Medium, bA, 4)
+yogaIns = Career("Yoga Instructor", Demand.Medium, bA, 4)
+
 # types of questions
 
 # database of degrees
@@ -99,12 +116,13 @@ epidlogist = Career("Epidemiologist", Demand.Medium, mSC, 6)
 # database of field
 engineering.defineCareers([comEngineer, bioEngineer, civEngineer, aeroEngineer, chemEngineer, elecEngineer, mechEngineer,
 petroEngineer, nuclearEngineer, roboticEngineer, rDEngineer, genetics, architecture])
+
 medical.defineCareers([doctor, dentist, surgeon, psychiatrist, veterinarian, pharma, nurse, oTT])
+
 sciHonours.defineCareers([bioTech, microBio, forensic, bioChem, researchSci, foodTech, psychologist, mHCouselor, 
 meteorologists, agriIns, marBio, astronomer, athmoRe, zoologist, wildBio, epidlogist])
 
 # test
-
 for field in fields:
     print(field.getData("name"), "strem ->", field.getData("streams"))
     print("---------------------")
