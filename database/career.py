@@ -144,19 +144,6 @@ coach = Career("Coach", Demand.Medium, bEd, 5)
 gamer = Career("Gamer", Demand.Low, anyD, 3)
 graphicDesigner = Career("Graphics Desingner", Demand.Medium, anyD, 4)
 animator = Career("Animator", Demand.Medium, anyD, 5)
-
-policeOff = Career("Police Officer", Demand.Medium, sSC, 5)
-armyOff = Career("Army Officer", Demand.Medium, nDA, 5)
-fightPilot = Career("Fighter Pilot", Demand.High, nDA, 17)
-navOff = Career("Navy Officer", Demand.High, nDA, 7)
-incomeTaxOff = Career("Income Tax Officer", Demand.Medium, sSC, 6)
-cbiOfficer = Career("Central Bureau of Investigation(CBI) Ofiicer", Demand.High, uPSC, 7)
-cidOfficer = Career("Crime Investigation Department(CID) Officer", Demand.High, uPSC, 6)
-iBOff = Career("Intelligence Bureau Officer", Demand.High, iBE, 6)
-iPSOfficer = Career("Indian Police Service(IPS) Officer", Demand.High, uPSC, 12)
-iASOfficer = Career("Indian Administrative Service(IAS) Officer", Demand.High, uPSC, 12)
-iFSOfficer = Career("Indian Foreign Service(IFS) Officer", Demand.High, uPSC, 7.2)
-
 airHostess = Career("Air Hostess", Demand.Medium, bBA, 6)
 socialMediaMang = Career("Social Media Manager", Demand.Low, anyD, 3)
 photographer = Career("Photographer", Demand.Medium, anyD, 4)
@@ -166,14 +153,25 @@ model = Career("Model", Demand.Medium, anyD, 4)
 librarian = Career("Librarian", Demand.Medium, anyD, 6)
 digitalMarketing = Career("Digital Marketing", Demand.Medium, anyD, 6)
 commercialPilot = Career("Commercial Pilot", Demand.High,comPilot, 8)
-customOfficial = Career("Custom Official", Demand.Medium, sSC, 5)
 aerobicInstructor = Career("Aerobic Instructor", Demand.Medium, anyD, 4)
 chef = Career("Chef", Demand.Medium, bHM, 5)
 dancer = Career("Dancer", Demand.Medium, anyD, 4)
-artist = Career("Artist", Demand.Medium, anyD, 4)
+painter = Career("Painter", Demand.Medium, anyD, 4)
 singer = Career("Singer", Demand.Medium, anyD, 4)
 videoEditor = Career("Video Editor", Demand.Medium, anyD, 4)
 
+policeOff = Career("Police Officer", Demand.Medium, sSC, 5)
+armyOff = Career("Army Officer", Demand.Medium, nDA, 5)
+fightPilot = Career("Fighter Pilot", Demand.High, nDA, 17)
+navOff = Career("Navy Officer", Demand.High, nDA, 7)
+customOfficial = Career("Custom Official", Demand.Medium, sSC, 5)
+incomeTaxOff = Career("Income Tax Officer", Demand.Medium, sSC, 6)
+cbiOfficer = Career("Central Bureau of Investigation(CBI) Ofiicer", Demand.High, uPSC, 7)
+cidOfficer = Career("Crime Investigation Department(CID) Officer", Demand.High, uPSC, 6)
+iBOff = Career("Intelligence Bureau Officer", Demand.High, iBE, 6)
+iPSOfficer = Career("Indian Police Service(IPS) Officer", Demand.High, uPSC, 12)
+iASOfficer = Career("Indian Administrative Service(IAS) Officer", Demand.High, uPSC, 12)
+iFSOfficer = Career("Indian Foreign Service(IFS) Officer", Demand.High, uPSC, 7.2)
 
 # types of questions
 
@@ -197,9 +195,11 @@ supChainMang, stockBroker])
 law.defineCareers([lawyer, corporateLawyer, judge, mediator, counsel, companySec])
 
 nationalSec.defineCareers([policeOff, armyOff, fightPilot, navOff, incomeTaxOff, cbiOfficer, cidOfficer, iBOff,
-iASOfficer, iPSOfficer, iFSOfficer])
+iASOfficer, iPSOfficer, iFSOfficer, customOfficial])
 
-general.defineCareers([teacher, professor, contentCreator, sportsPerson, coach, gamer, graphicDesigner, animator])
+general.defineCareers([teacher, professor, contentCreator, sportsPerson, coach, gamer, graphicDesigner, animator,
+airHostess, socialMediaMang, photographer, flimMaker, actor, model, librarian, digitalMarketing, commercialPilot,
+aerobicInstructor, chef, dancer, painter, singer, videoEditor])
 
 # test
 count = 0
