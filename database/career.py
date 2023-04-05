@@ -26,7 +26,6 @@ mA = Degree("Master of Arts", "2 Years", Difficulty.Medium)
 bDes = Degree("Bachelor of Design", "3 Years", Difficulty.Medium)
 mDes = Degree("Master of Design", "2 Years", Difficulty.Medium)
 bHM = Degree("Bachelor of Hotel Management", "3 Years", Difficulty.Medium)
-bFA = Degree("Bachelor of Fine Arts", "3 Years", Difficulty.Medium)
 lLB = Degree("Bachelor of Legislative Law", "3 Years", Difficulty.Medium)
 bCom = Degree("Bachelor of Commerce", "3 Years", Difficulty.Medium)
 bBA = Degree("Bachelor of Business Administration", "3 Years", Difficulty.Medium)
@@ -36,7 +35,8 @@ bEd = Degree("Bachelor of Education", "2 Years", Difficulty.Medium)
 uPSC = Degree("Union Public Service Commision", "Exam Based", Difficulty.Tough)
 sSC = Degree("Staff Selection Commission", "Exam Based", Difficulty.Medium)
 anyD = Degree("Any Degree", "None", Difficulty.Medium)
-iRDI = Degree("Insurance Regulatory and Development Authority of India","Exam Based", Difficulty.Medium )
+iRDI = Degree("Insurance Regulatory and Development Authority of India","Exam Based", Difficulty.Medium)
+iBE = Degree("IB ACIO Exam", "Exam Based", Difficulty.Tough)
 
 # types of field
 engineering = Field("Engineering", [science])
@@ -44,13 +44,12 @@ medical = Field("Medical", [science])
 sciHonours = Field("Honours", [science])
 
 artsHonours = Field("Honours", [arts])
-fineArts = Field("Fine Arts", [arts])
 law = Field("Law", [arts])
 
 comHonors = Field("Honours", [commerce])
 
-army = Field("Army", [science, arts, commerce])
-goverment = Field("Goverment", [science, arts, commerce])
+nationalSec = Field("National Security", [science, arts, commerce])
+# goverment = Field("Goverment", [science, arts, commerce]) # will try to add later
 general = Field("General", [science, arts, commerce])
 
 # types of career
@@ -77,13 +76,12 @@ microBio = Career("Microbiologist", Demand.Medium, bSC, 3.4)
 forensic = Career("Forensic", Demand.Medium, bSC, 5)
 bioChem = Career("Biochemist", Demand.Medium, bSC, 3.8)
 pharma = Career("Pharamicst", Demand.High, bSC, 4)
+gameDeveloper = Career("Game Developer", Demand.Medium, bSC, 4.8)
 researchSci = Career("Research Scientist", Demand.High, pHd, 8)
 foodTech = Career("Food Technologist", Demand.Medium, bSC, 4)
-fightPilot = Career("Fighter Pilot", Demand.High, nDA, 17)
 psychologist = Career("Psychologist", Demand.Medium, bSC, 5)
 mHCouselor = Career("Mental Health Counselor", Demand.Medium, mSC, 6)
 meteorologists = Career("Meteorologists", Demand.Medium, mSC, 4)
-navOff = Career("Navy Officer", Demand.High, nDA, 7)
 nurse = Career("Nurse", Demand.Medium, bSC, 4)
 agriIns = Career("Agricultural Inspector", Demand.Medium, bSC, 4.5)
 marBio = Career("Marine Biologist", Demand.Medium, mSC, 7)
@@ -94,7 +92,11 @@ zoologist = Career("Zoologist", Demand.Medium, bSC, 4)
 wildBio = Career("Wildlife Biologist", Demand.Medium, mSC, 6)
 epidlogist = Career("Epidemiologist", Demand.Medium, mSC, 6)
 
-lawyers = Career("Lawyer", Demand.High, lLB, 6)
+lawyer = Career("Lawyer", Demand.High, lLB, 6)
+corporateLawyer = Career("Corporate Lawyer", Demand.Medium, lLB, 7)
+judge = Career("Judge", Demand.High, lLB, 12)
+mediator = Career("Mediator", Demand.Medium, lLB, 6)
+counsel = Career("Counsel", Demand.Medium, lLB, 6.2)
 fashionDes = Career("Fashion Designer", Demand.Medium, bDes, 3.8)
 historian = Career("Historian", Demand.Medium, pHd, 8)
 cartographer = Career("Cartographer", Demand.Medium, mA, 3)
@@ -110,10 +112,8 @@ marketingEx = Career("Marketing Executive", Demand.Medium, mA, 5)
 companySec = Career("Company Secretary", Demand.Medium, lLB, 6)
 travelAg = Career("Travel Agent", Demand.Medium, bA, 4)
 yogaIns = Career("Yoga Instructor", Demand.Medium, bA, 4)
-graphicDesigner = Career("Graphics Desingner", Demand.Medium, bA, 4)
 geoScientist = Career("Geoscienctist",Demand.High, pHd, 14)
 hydrologist = Career("Hydrologist", Demand.Medium, pHd, 5)
-animator = Career("Animator", Demand.Medium, bFA, 5)
 designManager = Career("Design Manager", Demand.Medium, mDes, 6)
 cateringOfficer = Career("Catering Officer", Demand.Medium, bHM, 5)
 fSManger = Career("Food and service Manager", Demand.Medium, bHM, 4.8)
@@ -135,10 +135,28 @@ publicRelationManger = Career("Public Relation Manager",Demand.Medium, bBA, 3)
 supChainMang = Career("Supply Chain Manager", Demand.Medium, mBA, 6)
 stockBroker = Career("Stock Broker", Demand.Medium, bBA, 5)
 
+teacher = Career("Teacher", Demand.Medium, bEd, 6)
+professor = Career("Professor", Demand.High, pHd, 9)
+contentCreator = Career("Content Creator", Demand.Medium, anyD, 4)
+sportsPerson = Career("Sports Person", Demand.Medium, anyD, 4)
+coach = Career("Coach", Demand.Medium, bEd, 5)
+gamer = Career("Gamer", Demand.Low, anyD, 3)
+graphicDesigner = Career("Graphics Desingner", Demand.Medium, anyD, 4)
+animator = Career("Animator", Demand.Medium, anyD, 5)
+
+policeOff = Career("Police Officer", Demand.Medium, sSC, 5)
+armyOff = Career("Army Officer", Demand.Medium, nDA, 5)
+fightPilot = Career("Fighter Pilot", Demand.High, nDA, 17)
+navOff = Career("Navy Officer", Demand.High, nDA, 7)
+incomeTaxOff = Career("Income Tax Officer", Demand.Medium, sSC, 6)
+cbiOfficer = Career("Central Bureau of Investigation(CBI) Ofiicer", Demand.High, uPSC, 7)
+cidOfficer = Career("Crime Investigation Department(CID) Officer", Demand.High, uPSC, 6)
+iBOff = Career("Intelligence Bureau Officer", Demand.High, iBE, 6)
+iPSOfficer = Career("Indian Police Service(IPS) Officer", Demand.High, uPSC, 12)
+iASOfficer = Career("Indian Administrative Service(IAS) Officer", Demand.High, uPSC, 12)
+iFSOfficer = Career("Indian Foreign Service(IFS) Officer", Demand.High, uPSC, 7.2)
 
 # types of questions
-
-# database of degrees
 
 # database of field
 engineering.defineCareers([comEngineer, bioEngineer, civEngineer, aeroEngineer, chemEngineer, elecEngineer, mechEngineer,
@@ -147,12 +165,32 @@ petroEngineer, nuclearEngineer, roboticEngineer, rDEngineer, genetics, architect
 medical.defineCareers([doctor, dentist, surgeon, psychiatrist, veterinarian, pharma, nurse, oTT])
 
 sciHonours.defineCareers([bioTech, microBio, forensic, bioChem, researchSci, foodTech, psychologist, mHCouselor, 
-meteorologists, agriIns, marBio, astronomer, athmoRe, zoologist, wildBio, epidlogist])
+meteorologists, agriIns, marBio, astronomer, athmoRe, zoologist, wildBio, epidlogist, gameDeveloper])
+
+artsHonours.defineCareers([fashionDes, historian, cartographer, geographer, rehCounsellor, eventPlanner, hotelManager,
+socialWorker, journalist, politicalSci, fashionSty, travelAg, yogaIns, geoScientist, hydrologist,
+designManager, cateringOfficer, interiorDesigner])
+
+comHonors.defineCareers([buinessAnalyst, accountant, charteredAccountant, investmentBanker, costAndManagmentAcc, 
+managementAcc, economist, actuary, finalcialAnalyst, insurecePro, banker, finalcialPlanner, publicRelationManger,
+supChainMang, stockBroker])
+
+law.defineCareers([lawyer, corporateLawyer, judge, mediator, counsel, companySec])
+
+nationalSec.defineCareers([policeOff, armyOff, fightPilot, navOff, incomeTaxOff, cbiOfficer, cidOfficer, iBOff,
+iASOfficer, iPSOfficer, iFSOfficer])
+
+general.defineCareers([teacher, professor, contentCreator, sportsPerson, coach, gamer, graphicDesigner, animator])
 
 # test
+count = 0
+
 for field in fields:
-    print(field.getData("name"), "strem ->", field.getData("streams"))
+    print(field.getData("name"), "stream ->", field.getData("streams")[0].getData("name"))
     print("---------------------")
     for career in field.getData("careers"):
         print(career.getData("name"))
+        count += 1
     print("---------------------")
+
+print("total count =", count)

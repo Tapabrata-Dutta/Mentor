@@ -107,23 +107,16 @@ class Degree:
     __name = str
     __duration = str
     __difficulty = Difficulty
-    __roadMap = None
 
     def __init__(self, name:str, duration:str, difficulty:Difficulty) -> None:
         self.__name = name
         self.__duration = duration
         self.__difficulty = difficulty
-        self.__roadMap = []
-
-    def defineRoadMap(self, steps:list[str]) -> None:
-        if(len(self.__roadMap) > 0): raise Exception("Road Map is already present in {0}".format(self.__name))
-        else: self.__roadMap = steps
         
     def getData(self, data:str) -> any:
         if(data == "name"): return self.__name
         elif(data == "duration"): return self.__duration
         elif(data == "difficulty"): return self.__difficulty
-        elif(data == "roadMap"): return self.__roadMap
         else: raise Exception("data name = {0} not found in {1} Degree Class".format(data, self.__name))
         
         
