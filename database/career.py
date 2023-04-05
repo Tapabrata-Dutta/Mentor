@@ -37,6 +37,7 @@ sSC = Degree("Staff Selection Commission", "Exam Based", Difficulty.Medium)
 anyD = Degree("Any Degree", "None", Difficulty.Medium)
 iRDI = Degree("Insurance Regulatory and Development Authority of India","Exam Based", Difficulty.Medium)
 iBE = Degree("IB ACIO Exam", "Exam Based", Difficulty.Tough)
+comPilot = Degree("Commercial Pilot", "200 hr", Difficulty.Medium)
 
 # types of field
 engineering = Field("Engineering", [science])
@@ -155,6 +156,24 @@ iBOff = Career("Intelligence Bureau Officer", Demand.High, iBE, 6)
 iPSOfficer = Career("Indian Police Service(IPS) Officer", Demand.High, uPSC, 12)
 iASOfficer = Career("Indian Administrative Service(IAS) Officer", Demand.High, uPSC, 12)
 iFSOfficer = Career("Indian Foreign Service(IFS) Officer", Demand.High, uPSC, 7.2)
+
+airHostess = Career("Air Hostess", Demand.Medium, bBA, 6)
+socialMediaMang = Career("Social Media Manager", Demand.Low, anyD, 3)
+photographer = Career("Photographer", Demand.Medium, anyD, 4)
+flimMaker = Career("Flim Maker", Demand.Medium, anyD, 4)
+actor = Career("Actor", Demand.Medium, anyD, 4)
+model = Career("Model", Demand.Medium, anyD, 4)
+librarian = Career("Librarian", Demand.Medium, anyD, 6)
+digitalMarketing = Career("Digital Marketing", Demand.Medium, anyD, 6)
+commercialPilot = Career("Commercial Pilot", Demand.High,comPilot, 8)
+customOfficial = Career("Custom Official", Demand.Medium, sSC, 5)
+aerobicInstructor = Career("Aerobic Instructor", Demand.Medium, anyD, 4)
+chef = Career("Chef", Demand.Medium, bHM, 5)
+dancer = Career("Dancer", Demand.Medium, anyD, 4)
+artist = Career("Artist", Demand.Medium, anyD, 4)
+singer = Career("Singer", Demand.Medium, anyD, 4)
+videoEditor = Career("Video Editor", Demand.Medium, anyD, 4)
+
 
 # types of questions
 
